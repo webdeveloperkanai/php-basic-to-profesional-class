@@ -1,16 +1,20 @@
 <?php require("header.php");
 
-$myemail = "email@gmail.com";
-$mypass = "123456";
-
 if (isset($_POST['register'])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    if ($email == $myemail && $password == $mypass) {
-        header("location: account.php"); /// page redirection 
+    $sql = "SELECT id,name from users where email='$email' and password='$password' ";
+    $q = mysqli_query($con, $sql);
+
+    if (mysqli_num_rows($q) > 0) {
+        $user = mysqli_fetch_array($q);
+
+        $_SESSION['uid'] = $user['id'];
+
+        echo "<script>location.href='account.php'</script>"; 
     } else {
-        echo "<h1>Invalid info </h1>";
+        echo "<script>alert('Invalid credentials!')</script>";
     }
 }
 ?>
@@ -30,7 +34,7 @@ if (isset($_POST['register'])) {
             <input type="password" name="password" id="password" class="form-control">
             <br>
             <input type="submit" name="register" value="Login" class="btn btn-primary w-100">
-            <br> <br> 
+            <br> <br>
             <a href="register.php">Register now</a>
         </form>
 

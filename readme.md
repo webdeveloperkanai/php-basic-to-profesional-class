@@ -22,3 +22,9 @@ default user - root
 default pass - ""
 default host - localhost
 database name - phpclass
+
+## Register [INSERT/CREATE]
+
+## Login [SELECT/READ]
+
+## SESSION 

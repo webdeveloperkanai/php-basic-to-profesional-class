@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 $host = "localhost"; // database location 
 $username = "dsi"; // database user 
 $password = "Kanai@123#"; // database password 
