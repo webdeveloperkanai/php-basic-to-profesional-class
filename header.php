@@ -49,6 +49,13 @@ function mysum($a, $b)
                     <a class="nav-link" href="./login.php">Login</a>
                 </li>
 
+                <li class="nav-item">
+                    <a class="nav-link" href="./account.php">My Account</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./users.php">Manage Users</a>
+                </li>
+
             </ul>
             <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">

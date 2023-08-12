@@ -28,3 +28,9 @@ database name - phpclass
 ## Login [SELECT/READ]
 
 ## SESSION 
+
+## UPDATE 
+
+## DELETE
+
+## DATA-TABLE
